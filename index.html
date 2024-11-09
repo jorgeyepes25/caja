@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Caja Registradora</title>
+    <link rel="stylesheet" href="./style/index.css">
+    <link rel="icon" href="https://cdn-icons-png.flaticon.com/128/4689/4689889.png">
+</head>
+
+<body>
+
+    <div class="container">
+        <h1>Caja Registradora</h1>
+
+        <!-- Contenedor principal para los dos paneles -->
+        <div class="panels">
+            <!-- Panel Izquierdo: Formulario para agregar productos -->
+            <div class="left-panel">
+                <h3>Agregar Artículo</h3>
+                <input id="newArticle" type="text" placeholder="Nombre del artículo" />
+                <input id="newPrice" type="number" placeholder="Precio del artículo" />
+                <button onclick="addArticle()">Agregar Artículo</button>
+            </div>
+
+            <!-- Panel Derecho: Selección de artículos y cantidad -->
+            <div class="right-panel">
+                <h3>Compra</h3>
+                <div class="input-group">
+                    <label for="product">Producto</label>
+                    <select id="articleSelect" onchange="showSelectedArticle()">
+                        <option value="">Seleccione un artículo</option>
+                    </select>
+                </div>
+
+                <!-- Div para mostrar información del producto seleccionado -->
+                <div id="selectedArticle" style="margin-top: 10px;"></div>
+
+                <div class="input-group">
+                    <label for="articleQuantity">Cantidad</label>
+                    <input id="articleQuantity" type="number" placeholder="Cantidad" value="1" min="1" />
+                </div>
+
+                <h3>Total de Venta</h3>
+                <div id="totalAmount">Total: $0.00</div>
+
+                <!-- Cambiar el botón a "Agregar al carrito" y añadir "Pagar" -->
+                <button onclick="addToCart()">Agregar al carrito</button>
+                <button onclick="payCart()">Pagar</button>
+                <button onclick="clearSelection()">Borrar</button>
+            </div>
+        </div>
+
+        <h3>Artículos en el Carrito</h3>
+        <div id="cartList"></div>
+
+        <h3>Historial de Productos Comprados</h3>
+        <div class="article-list" id="cartHistory"></div>
+
+    </div>
+
+    <script src="./js/script.js"></script>
+
+</body>
+
+</html>

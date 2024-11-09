@@ -1,0 +1,90 @@
+body {
+  font-family: Arial, sans-serif;
+}
+
+.container {
+  width: 80%;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.panels {
+  display: flex;
+  justify-content: space-between;
+  margin: 20px 0;
+}
+
+/* Estilos para pantallas grandes */
+.left-panel,
+.right-panel {
+  width: 45%;
+  padding: 20px;
+  border: 1px solid #ccc;
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
+  border-radius: 5px;
+}
+
+.input-group {
+  margin-bottom: 20px;
+}
+
+.input-group label {
+  display: block;
+  margin-bottom: 5px;
+}
+
+.input-group input,
+.input-group select {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+button {
+  margin-top: 10px;
+  padding: 10px 20px;
+  background-color: #28a745;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #218838;
+}
+
+button:last-child {
+  background-color: #dc3545;
+}
+
+button:last-child:hover {
+  background-color: #c82333;
+}
+
+#cartList {
+  margin-top: 20px;
+  text-align: left;
+}
+
+/* Estilos para pantallas pequeñas - Móviles */
+@media (max-width: 768px) {
+  .panels {
+    display: block; /* Cambia de columnas a filas */
+  }
+
+  .left-panel,
+  .right-panel {
+    width: 100%; /* Ocupa el ancho completo */
+    margin-bottom: 20px; /* Añade espacio entre los paneles */
+  }
+
+  h1 {
+    font-size: 1.5em; /* Reduce el tamaño del texto en móviles */
+  }
+
+  button {
+    width: 100%; /* Asegura que los botones ocupen todo el ancho */
+  }
+}
